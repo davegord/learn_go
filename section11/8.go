@@ -8,7 +8,7 @@ func main() {
 		`money_penny`: []string{`James Bond`, `Literature`, `Computer Science`},
 	}
 
-	x["dave_gordon"] = []string{"Jess Gordon", "Wine", "Pussy"}
+	x["dave_gordon"] = []string{"Jess Gordon", "Wine", "Dogs"}
 
 	for i, v := range x {
 		//fmt.Println(i, v)
