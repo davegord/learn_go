@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"sync/atomic"
 )
 
 var incrementor int
@@ -12,19 +13,17 @@ func main() {
 	gs := 100
 
 	var wg sync.WaitGroup
-	var mu sync.Mutex
+
+	var incrementor int64
 
 	wg.Add(gs)
 
 	for i := 0; i < gs; i++ {
 		go func() {
-			mu.Lock()
-			t := incrementor
+
 			//fmt.Println("testing")
-			t++
-			incrementor = t
+			atomic.AddInt64(&incrementor, 1)
 			wg.Done()
-			mu.Unlock()
 		}()
 	}
 	wg.Wait()
