@@ -35,5 +35,5 @@ func main() {
 	saySomething(&d)
 
 	fmt.Println("Trying to call something without a pointer")
-	saySomething(d)
+	//saySomething(d)
 }
