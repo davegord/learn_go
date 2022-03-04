@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/davegord/learn_go/ninja-level-twelve/001/dog"
 )
 
