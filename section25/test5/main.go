@@ -10,6 +10,6 @@ func main() {
 
 func Foo(i, j int) int {
 	s := i + j
-	fmt.Printf("In Foo, the sum is %v\n", s)
+	//fmt.Printf("In Foo, the sum is %v\n", s)
 	return s
 }
